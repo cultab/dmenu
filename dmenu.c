@@ -804,6 +804,8 @@ main(int argc, char *argv[])
 			colortemp[3] = argv[++i];
 		else if (!strcmp(argv[i], "-w"))   /* embedding window id */
 			embed = argv[++i];
+		else if (!strcmp(argv[i], "-bw"))
+			border_width = atoi(argv[++i]); /* border width */
 		else
 			usage();
 
