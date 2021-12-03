@@ -370,6 +370,8 @@ keypress(XKeyEvent *ev)
 			break;
 		case XK_y: /* paste selection */
 		case XK_Y:
+		case XK_v: /* also with v,V */
+		case XK_V:
 			XConvertSelection(dpy, (ev->state & ShiftMask) ? clip : XA_PRIMARY,
 			                  utf8, utf8, win, CurrentTime);
 			return;
